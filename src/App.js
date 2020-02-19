@@ -9,7 +9,6 @@ function App() {
   const getBlogs = async () => {
     let resp = await fetch('https://us-central1-henrygrant.cloudfunctions.net/blogs');
     let data = await resp.json();
-    console.log(data)
     setBlogs(data);
   }
 
