@@ -7,11 +7,11 @@ import Tweet from './Tweet'
 
 function App() {
 
-  const getBlogs = async () => {
-    let resp = await fetch('https://us-central1-henrygrant.cloudfunctions.net/blogs');
-    let data = await resp.json();
-    setBlogs(data);
-  }
+  // const getBlogs = async () => {
+  //   let resp = await fetch('https://us-central1-henrygrant.cloudfunctions.net/blogs');
+  //   let data = await resp.json();
+  //   setBlogs(data);
+  // }
 
   const getTweets = async () => {
     let resp = await fetch('https://us-central1-henrygrant.cloudfunctions.net/tweets');
@@ -19,12 +19,12 @@ function App() {
     setTweets(data);
   }
 
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
   const [tweets, setTweets] = useState([]);
   
   useEffect(() => {
     getTweets();
-    getBlogs();    
+    // getBlogs();    
   }, [])
   
   return (
