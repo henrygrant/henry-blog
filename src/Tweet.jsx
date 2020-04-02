@@ -25,7 +25,7 @@ function Tweet(props) {
     if(tweet.entities.media) {
       return tweet.entities.media.map(img => (
         <div className='imageContainer' key={img.id}>
-          <img className='image' src={img.media_url} alt={img.media_url}/>
+          <img className='image' src={img.media_url_https} alt={img.media_url_https}/>
         </div>
       ))
     } else {

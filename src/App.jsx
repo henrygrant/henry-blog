@@ -16,6 +16,7 @@ function App() {
   const getTweets = async () => {
     let resp = await fetch('https://us-central1-henrygrant.cloudfunctions.net/tweets');
     let data = await resp.json();
+    console.log(data)
     setTweets(data);
   }
 
@@ -33,7 +34,7 @@ function App() {
       <div className="postContainer">
         <div className="tweets">
           {tweets ? tweets.map(tweet => (
-            <Tweet tweet={tweet}/>
+            <Tweet tweet={tweet} key={tweet.id}/>
           )) : null}
         </div>
         {/*
